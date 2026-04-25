@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Mis Tareas</h1>
+
+  <form id="form">
+    <input type="text" id="input" placeholder="Nueva tarea...">
+    <button>Agregar</button>
+  </form>
+
+  <ul id="lista"></ul>
+
+  <div class="contador">Pendientes: <span id="contador">0</span></div>
+</div>
+
+<script>
+const form = document.getElementById("form");
+const input = document.getElementById("input");
+const lista = document.getElementById("lista");
+const contador = document.getElementById("contador");
+
+function actualizarContador() {
+  const pendientes = document.querySelectorAll("li:not(.completada)").length;
+  contador.textContent = pendientes;
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (input.value.trim() === "") return;
+
+  const li = document.createElement("li");
+  li.textContent = input.value;
+
+  
+  li.addEventListener("click", () => {
+    li.classList.toggle("completada");
+    actualizarContador();
+  });
+
+
+  const btn = document.createElement("button");
+  btn.textContent = "X";
+  btn.classList.add("delete");
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    li.remove();
+    actualizarContador();
+  });
+
+  li.appendChild(btn);
+  lista.appendChild(li);
+
+  input.value = "";
+  actualizarContador();
+});
+</script>
+
+</body>
+</html>
