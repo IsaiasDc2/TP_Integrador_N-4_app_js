@@ -1,11 +1,11 @@
-
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const lista = document.getElementById("lista");
 const contador = document.getElementById("contador");
 
+
 function actualizarContador() {
-  const pendientes = document.querySelectorAll("li:not(.completada)").length;
+  const pendientes = lista.querySelectorAll("li:not(.completada)").length;
   contador.textContent = pendientes;
 }
 
@@ -17,13 +17,13 @@ form.addEventListener("submit", (e) => {
   const li = document.createElement("li");
   li.textContent = input.value;
 
-  
+ 
   li.addEventListener("click", () => {
     li.classList.toggle("completada");
     actualizarContador();
   });
 
-
+  
   const btn = document.createElement("button");
   btn.textContent = "X";
   btn.classList.add("delete");
@@ -38,5 +38,9 @@ form.addEventListener("submit", (e) => {
   lista.appendChild(li);
 
   input.value = "";
+
   actualizarContador();
 });
+
+
+actualizarContador();

@@ -1,4 +1,3 @@
-
 const productos = [
   { id:1, nombre:"Celular", precio:1000, categoria:"tecnologia", enStock:true },
   { id:2, nombre:"Notebook", precio:2000, categoria:"tecnologia", enStock:false },

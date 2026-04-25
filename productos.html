@@ -3,31 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Productos</title>
-
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
 
-<h1>Productos</h1>
+ 
+  <header class="header">
+    <h1>Productos</h1>
+    <p class="subtitulo">Filtrado dinámico con JavaScript</p>
+  </header>
 
-<select id="categoria">
-  <option value="">Todas</option>
-  <option value="tecnologia">Tecnología</option>
-  <option value="ropa">Ropa</option>
-</select>
+ 
+  <main class="main">
 
-<input type="range" id="precio" min="0" max="2000" value="2000">
-<span id="precioValor">2000</span>
 
-<label>
-  <input type="checkbox" id="stock"> Solo en stock
-</label>
+    <div class="filtros">
 
-<input type="text" id="busqueda" placeholder="Buscar...">
+      <select id="categoria">
+        <option value="">Todas</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="ropa">Ropa</option>
+      </select>
 
-<div id="productos"></div>
+      <input type="range" id="precio" min="0" max="2000" value="2000">
+      <span id="precioValor">2000</span>
 
-<script src="js/productos.js"></script>
+      <label>
+        <input type="checkbox" id="stock"> Solo en stock
+      </label>
+
+      <input type="text" id="busqueda" placeholder="Buscar...">
+
+    </div>
+
+   
+    <div id="productos"></div>
+
+  </main>
+
+ 
+  <footer class="site-footer">
+
+    <div class="footer-content">
+
+      <div class="footer-section">
+        <h3>TP JavaScript</h3>
+        <p>Mini aplicación con DOM, eventos y APIs.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/IsaiasDc2" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:tuemail@gmail.com">Gmail</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Autor</h3>
+        <p>Isaias Ramses Casasola Duran</p>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <p class="footer-copyright">
+      © 2026 - Prácticas Profesionalizantes II | TP Integrador JavaScript
+    </p>
+
+  </footer>
+
+  
+  <script src="js/productos.js"></script>
+
 </body>
 </html>

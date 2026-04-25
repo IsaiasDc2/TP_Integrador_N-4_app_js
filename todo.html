@@ -2,29 +2,74 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo</title>
-
   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Mis Tareas</h1>
+  
+  <header class="header">
+    <h1>Tareas</h1>
+  </header>
 
-  <form id="form">
-    <input type="text" id="input" placeholder="Nueva tarea...">
-    <button>Agregar</button>
-  </form>
+  
+  <main class="main">
 
-  <ul id="lista"></ul>
+    <div class="container">
+      <h1>Mis Tareas</h1>
 
-  <div class="contador">
-    Pendientes: <span id="contador">0</span>
-  </div>
-</div>
+      <form id="form">
+        <input type="text" id="input" placeholder="Nueva tarea..." required>
+        <button type="submit">Agregar</button>
+      </form>
 
-<script src="js/todo.js"></script>
+      <ul id="lista"></ul>
+
+      <div class="contador">
+        Pendientes: <span id="contador">0</span>
+      </div>
+    </div>
+
+  </main>
+
+  
+  <footer class="site-footer">
+
+    <div class="footer-content">
+
+      <div class="footer-section">
+        <h3>TP JavaScript</h3>
+        <p>Mini aplicación con DOM, eventos y APIs.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/IsaiasDc2" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:tuemail@gmail.com">Gmail</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Autor</h3>
+        <p>Isaias Ramses Casasola Duran</p>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <p class="footer-copyright">
+      © 2026 - Prácticas Profesionalizantes II | TP Integrador JavaScript
+    </p>
+
+  </footer>
+
+  
+  <script src="js/todo.js"></script>
+
 </body>
-</html>
 </html>
