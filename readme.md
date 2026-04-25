@@ -26,8 +26,6 @@ Eliminar tareas
 Contador dinámico de tareas pendientes
 Validación para evitar tareas vacías
 
----
-
 Pokemon Api
 Consumo de API externa (PokéAPI):
 Fetch con async/await
@@ -49,6 +47,6 @@ Tecnologías utilizadas
 - API pública: PokéAPI
 
 Capturas
+![Imagen](https://github.com/IsaiasDc2/TP_Integrador_N-4_app_js/blob/dc0fe8f07e064c8a346b96b89a00c3c8fb27967c/imagenes/Captura%20de%20pantalla%202026-04-25%20165847.png)
 ![Imagen]()
 
-git clone https://github.com/IsaiasDc2/TP_Integrador_N-4_app_js.git
