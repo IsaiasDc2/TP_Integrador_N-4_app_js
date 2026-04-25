@@ -7,7 +7,7 @@
   --color-error-borde: #dc3545;
 }
 
-/* ===== GENERAL ===== */
+
 body {
   font-family: Arial, sans-serif;
   background: var(--color-fondo);
@@ -20,7 +20,7 @@ h1 {
   text-align: center;
 }
 
-/* ===== INPUT ===== */
+
 input {
   padding: 10px;
   border-radius: 8px;
@@ -33,7 +33,7 @@ input:focus {
   border: 2px solid var(--color-principal);
 }
 
-/* ===== BOTONES ===== */
+
 button {
   padding: 8px 12px;
   border: none;
@@ -48,7 +48,7 @@ button:hover {
   background: var(--color-secundario);
 }
 
-/* ===== GRID (RESPONSIVE) ===== */
+
 #contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -57,7 +57,7 @@ button:hover {
   margin: 20px auto;
 }
 
-/* ===== CARDS ===== */
+
 .card {
   background: white;
   padding: 15px;
@@ -77,9 +77,7 @@ button:hover {
   height: 100px;
 }
 
-/* ===== ESTADOS ===== */
 
-/* Loading */
 .loading {
   text-align: center;
   font-weight: bold;
@@ -92,7 +90,7 @@ button:hover {
   100% { opacity: 1; }
 }
 
-/* Error */
+
 .error {
   background: var(--color-error);
   border: 2px solid var(--color-error-borde);
@@ -103,7 +101,7 @@ button:hover {
   max-width: 400px;
 }
 
-/* Vacío */
+
 .vacio {
   text-align: center;
   color: #777;
@@ -111,7 +109,7 @@ button:hover {
   font-size: 18px;
 }
 
-/* ===== TO-DO ===== */
+
 .container {
   background: white;
   padding: 20px;
@@ -143,14 +141,13 @@ li {
   cursor: pointer;
 }
 
-/* Tarea completada */
+
 li.completada {
   text-decoration: line-through;
   color: gray;
   background: #d4edda;
 }
 
-/* Botón eliminar */
 .delete {
   background: crimson;
 }
