@@ -164,3 +164,35 @@ li.completada {
   text-align: center;
   font-weight: bold;
 }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #1e3a8a;
+    }
+  
