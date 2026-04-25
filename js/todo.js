@@ -1,27 +1,4 @@
-<!DOCTYPE html>
 
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Todo</title>
-  <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-
-<div class="container">
-  <h1>Mis Tareas</h1>
-
-  <form id="form">
-    <input type="text" id="input" placeholder="Nueva tarea...">
-    <button>Agregar</button>
-  </form>
-
-  <ul id="lista"></ul>
-
-  <div class="contador">Pendientes: <span id="contador">0</span></div>
-</div>
-
-<script>
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const lista = document.getElementById("lista");
@@ -63,7 +40,3 @@ form.addEventListener("submit", (e) => {
   input.value = "";
   actualizarContador();
 });
-</script>
-
-</body>
-</html>

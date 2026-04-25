@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>API Pokémon</title>
-<link rel="stylesheet" href="css/app.css">
-</head>
-<body>
 
-<h1>Pokémon</h1>
-
-<input type="text" id="buscar" placeholder="Buscar Pokémon...">
-<p id="estado"></p>
-
-<div id="contenedor"></div>
-
-<script>
 const contenedor = document.getElementById("contenedor");
 const estado = document.getElementById("estado");
 const buscar = document.getElementById("buscar");
 
 let listaPokemon = [];
 
-// ===== RENDER =====
+
 const render = (lista) => {
   if (lista.length === 0) {
     contenedor.innerHTML = `<p class="vacio">No se encontraron resultados</p>`;
@@ -36,7 +20,7 @@ const render = (lista) => {
   `).join("");
 };
 
-// ===== CARGA INICIAL =====
+
 const cargar = async () => {
   try {
     estado.className = "loading";
@@ -73,7 +57,7 @@ const cargar = async () => {
   }
 };
 
-// ===== BUSCADOR =====
+
 buscar.addEventListener("input", () => {
   const valor = buscar.value.toLowerCase().trim();
 
@@ -103,9 +87,5 @@ buscar.addEventListener("input", () => {
   render(filtrados);
 });
 
-// iniciar
-cargar();
-</script>
 
-</body>
-</html>
+cargar();

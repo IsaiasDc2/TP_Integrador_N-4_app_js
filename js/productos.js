@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Productos</title>
-  <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
 
-<h1>Productos</h1>
-
-<select id="categoria">
-  <option value="">Todas</option>
-  <option value="tecnologia">Tecnología</option>
-  <option value="ropa">Ropa</option>
-</select>
-
-<input type="range" id="precio" min="0" max="2000" value="2000">
-<span id="precioValor">2000</span>
-
-<label>
-  <input type="checkbox" id="stock"> Solo en stock
-</label>
-
-<input type="text" id="busqueda" placeholder="Buscar...">
-
-<div id="productos"></div>
-
-<script>
 const productos = [
   { id:1, nombre:"Celular", precio:1000, categoria:"tecnologia", enStock:true },
   { id:2, nombre:"Notebook", precio:2000, categoria:"tecnologia", enStock:false },
@@ -65,7 +37,7 @@ const renderizar = () => {
   `).join("");
 };
 
-// Eventos
+
 document.getElementById("categoria").onchange = renderizar;
 document.getElementById("precio").oninput = (e) => {
   document.getElementById("precioValor").textContent = e.target.value;
@@ -74,9 +46,5 @@ document.getElementById("precio").oninput = (e) => {
 document.getElementById("stock").onchange = renderizar;
 document.getElementById("busqueda").oninput = renderizar;
 
-// Inicial
-renderizar();
-</script>
 
-</body>
-</html>
+renderizar();
